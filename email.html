@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      html {
+        height: 100vh;
+        width: 100vw;
+      }
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        width: 100%;
+        background-color: #e2e8f0;
+        padding: 40px;
+        box-sizing: border-box;
+      }
+      .email-container {
+        max-width: 600px;
+        background-color: #ffffff;
+        border: 1px solid #ddd;
+        margin: auto;
+        min-height: 100%;
+        display: flex;
+        flex-direction: column;
+        border-radius: 8px;
+        overflow: hidden;
+        box-sizing: border-box;
+      }
+      .logo {
+        text-align: left;
+        margin-top: 20px;
+        padding: 40px;
+      }
+      .logo img {
+        max-width: 150px;
+      }
+      .content-container {
+        flex-grow: 1;
+        padding: 40px;
+      }
+      .heading {
+        font-size: 24px;
+        color: #0f172a;
+        margin-bottom: 40px;
+      }
+      .content {
+        font-size: 14px;
+        color: #334155;
+        line-height: 1.5;
+        margin-bottom: 30px;
+        margin-top: 30px;
+      }
+      .footer {
+        background-color: #0f172a;
+        color: #fff;
+        text-align: left;
+        padding: 40px;
+      }
+      .footer-icons {
+        margin-bottom: 40px;
+        font-size: 14px;
+      }
+      .footer-icons a {
+        color: white;
+        text-decoration: none;
+        padding-right: 10px;
+      }
+      .copyright {
+        font-size: 14px;
+      }
+      .key-value {
+        padding: 16px 0 16px 0;
+        border-bottom: solid 1px #e2e8f0;
+        font-size: 14px;
+        display: table;
+        width: 100%; /* Ensures the full width is used */
+        table-layout: auto; /* Prevents content from overflowing */
+      }
+      .key-value .key,
+      .key-value .value {
+        display: table-cell;
+      }
+      .key-value .key {
+        color: #475569;
+        width: 50%; /* Simulates the space distribution */
+        padding-right: 16px;
+      }
+      .key-value .value {
+        color: #0f172a;
+        width: 50%; /* Simulates the space distribution */
+        padding-left: 16px;
+        text-align: right; /* Mimics justify-content: space-between */
+      }
+      .button {
+        background-color: #0f172a;
+        color: white;
+        font-size: 14px;
+        text-decoration: none;
+        padding: 10px 12px;
+        display: block;
+        max-width: 145px;
+        text-align: center;
+        /* slate/900 */
+        background: #0f172a;
+        /* Shadow For card */
+        box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.05);
+        border-radius: 6px;
+      }
+      .footer-icons {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="email-container">
+      <!-- Logo Section -->
+      <div class="logo">
+        <svg
+          width="115"
+          height="30"
+          viewBox="0 0 115 30"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M16.8818 9.54286C16.8039 8.59048 16.4388 7.84762 15.7865 7.31429C15.144 6.78096 14.1655 6.51429 12.8512 6.51429C12.0139 6.51429 11.3275 6.61429 10.7921 6.81429C10.2663 7.00477 9.87691 7.26667 9.62379 7.6C9.37066 7.93334 9.23922 8.31429 9.22949 8.74286C9.21002 9.09524 9.2733 9.41429 9.41934 9.70001C9.57511 9.9762 9.8185 10.2286 10.1495 10.4571C10.4805 10.6762 10.904 10.8762 11.42 11.0571C11.936 11.2381 12.5494 11.4 13.2601 11.5429L15.7135 12.0571C17.3686 12.4 18.7851 12.8524 19.9631 13.4143C21.1412 13.9762 22.105 14.6381 22.8547 15.4C23.6043 16.1524 24.1544 17 24.5049 17.9429C24.8651 18.8857 25.0501 19.9143 25.0598 21.0286C25.0501 22.9524 24.5584 24.581 23.5848 25.9143C22.6113 27.2476 21.2191 28.2619 19.4082 28.9571C17.6071 29.6524 15.4409 30 12.9096 30C10.3102 30 8.04173 29.6238 6.10431 28.8714C4.17664 28.119 2.67733 26.9619 1.6064 25.4C0.545202 23.8286 0.00973574 21.819 0 19.3714H7.71071C7.75939 20.2667 7.98818 21.0191 8.39708 21.6286C8.80598 22.2381 9.38039 22.7 10.1203 23.0143C10.87 23.3286 11.7608 23.4857 12.7928 23.4857C13.6593 23.4857 14.3846 23.381 14.9687 23.1714C15.5529 22.9619 15.9958 22.6714 16.2976 22.3C16.5994 21.9286 16.7552 21.5048 16.765 21.0286C16.7552 20.581 16.6043 20.1905 16.3122 19.8571C16.0299 19.5143 15.5626 19.2095 14.9103 18.9429C14.258 18.6667 13.3769 18.4095 12.267 18.1714L9.2879 17.5429C6.63978 16.981 4.55146 16.0429 3.02295 14.7286C1.50417 13.4048 0.749652 11.6 0.759388 9.31429C0.749652 7.45715 1.25591 5.83334 2.27816 4.44286C3.31015 3.04286 4.73644 1.95239 6.55703 1.17144C8.38735 0.390483 10.4854 7.19343e-06 12.8512 7.19343e-06C15.2656 7.19343e-06 17.354 0.395245 19.1161 1.18572C20.8783 1.9762 22.2364 3.09048 23.1905 4.52858C24.1544 5.95715 24.6412 7.62858 24.6509 9.54286H16.8818Z"
+            fill="black"
+          />
+          <path
+            d="M16.6433 6.51429L13.742 0H44.7008V6.4H35.705V29.2571H27.7022V6.4L16.6433 6.51429Z"
+            fill="black"
+          />
+          <path
+            d="M41.1768 29.2571V0H49.2964V22.8571H61.3882V29.2571H41.1768Z"
+            fill="black"
+          />
+          <path
+            d="M58.0905 0H68.1963L75.1476 16.5714H75.4981L82.4494 0H92.5551V29.2571H84.6107V12.3429H84.3771L77.7178 29.0286H72.9278L66.2686 12.2286H66.0349V29.2571H58.0905V0Z"
+            fill="black"
+          />
+          <path
+            d="M89.0055 6.4V0H115V6.4H106.004V29.2571H98.0014V6.4H89.0055Z"
+            fill="black"
+          />
+        </svg>
+      </div>
+      <div class="content-container">
+        <!-- Heading Section -->
+        <div class="heading">Request Approval</div>
+
+        <!-- Text Content Section -->
+        <div class="content">
+          <p>
+            Hello ${approverName}, a new ${requestType} has been submitted and
+            requires your approval.
+          </p>
+          <div class="key-value">
+            <span class="key">Date requested</span>
+            <span class="value">${createdAt}</span>
+          </div>
+          <div class="key-value">
+            <span class="key">Requestor</span>
+            <span class="value">${requestorName}</span>
+          </div>
+          <div class="key-value">
+            <span class="key">Description</span>
+            <span class="value">${description}</span>
+          </div>
+        </div>
+        <div>
+          <a href="${requestUrl || '#'}" class="button">See more</a>
+        </div>
+      </div>
+
+      <!-- Footer Section -->
+      <div class="footer">
+        <div class="footer-icons">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Contact Support</a>
+          <a href="#">View Dashboard</a>
+        </div>
+        <div class="footer-icons">
+          <svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M18 2H15C13.6739 2 12.4021 2.52678 11.4645 3.46447C10.5268 4.40215 10 5.67392 10 7V10H7V14H10V22H14V14H17L18 10H14V7C14 6.73478 14.1054 6.48043 14.2929 6.29289C14.4804 6.10536 14.7348 6 15 6H18V2Z"
+              stroke="white"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+          <svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M22 4.00002C22 4.00002 21.3 6.10002 20 7.40002C21.6 17.4 10.6 24.7 2 19C4.2 19.1 6.4 18.4 8 17C3 15.5 0.5 9.60002 3 5.00002C5.2 7.60002 8.6 9.10002 12 9.00002C11.1 4.80002 16 2.40002 19 5.20002C20.1 5.20002 22 4.00002 22 4.00002Z"
+              stroke="white"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+          <svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M17.5 6.5H17.51M7 2H17C19.7614 2 22 4.23858 22 7V17C22 19.7614 19.7614 22 17 22H7C4.23858 22 2 19.7614 2 17V7C2 4.23858 4.23858 2 7 2ZM16 11.37C16.1234 12.2022 15.9812 13.0522 15.5937 13.799C15.2062 14.5458 14.5931 15.1514 13.8416 15.5297C13.0901 15.9079 12.2384 16.0396 11.4077 15.9059C10.5771 15.7723 9.80971 15.3801 9.21479 14.7852C8.61987 14.1902 8.22768 13.4229 8.09402 12.5922C7.96035 11.7615 8.09202 10.9099 8.47028 10.1584C8.84854 9.40685 9.45414 8.79374 10.2009 8.40624C10.9477 8.01874 11.7977 7.87658 12.63 8C13.4789 8.12588 14.2648 8.52146 14.8716 9.1283C15.4785 9.73515 15.8741 10.5211 16 11.37Z"
+              stroke="white"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </div>
+        <div class="copyright">
+          <p style="color: darkgrey">
+            This email is computer-generated. Please do not reply to this email.
+            If you have any questions, contact your broker directly using the
+            communication channels you have previously used.
+          </p>
+          © ${new Date().getFullYear()} Powered by STLMT - Developed by OA
+          Technology Payments Ltd, No.1 Norfo Close, North Dzorwulu, Accra
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
